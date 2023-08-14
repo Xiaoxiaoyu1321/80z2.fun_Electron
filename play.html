@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			name="viewport">
+			
+			
+		<style>
+		body {
+				
+				background-image: url('bg.jpg');
+				background-size:100%;
+				background-attachment:fixed;
+				
+				
+			}
+			.mediaplay{
+				backdrop-filter : blur(5px);
+				width=100%;
+				height=100%;
+			}
+		
+		</style>
+		
+		
+	</head>
+	<body>
+		
+		<div class="mediaplay">
+		<a href="index.html">返回</a>
+		<script type="text/javascript">
+			function GetQueryString(name)
+			{
+     			var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     			var r = window.location.search.substr(1).match(reg);
+     			if(r!=null)return  decodeURI(r[2]); return null;
+			}
+			var song = GetQueryString("song");
+			
+			var txtttt = "<h5>现在播放：" + song+"</h5>"
+			document.write(txtttt)
+			var dnm = '\" type=\"audio/mpeg\"'
+			var wdnmd = 'control=\"controls\"'
+			console.log(dnm)
+			var songplayer = '<audio controls="" id="mp"><source src="https://jzsw-1304292379.cos.ap-beijing.myqcloud.com/music/' +song+ '.mp3'+ dnm +' ' + wdnmd+ '></audio>'
+			console.log(songplayer)
+			document.write(songplayer)
+			
+			var audio = document.getElementById("mp");
+				
+			var titlesonegname = "<title>"+ song + "</title>"
+			document.write(titlesonegname)
+			
+			
+			function pauseaudio(){
+				
+				audio.pause();
+				alert("nb");
+			}
+			
+		</script>
+		
+		
+	</body>
+</html>

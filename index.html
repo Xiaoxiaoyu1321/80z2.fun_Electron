@@ -187,7 +187,7 @@
 	<body>
 		<div class="menu">
 		<b>明天的梦 音乐站</b><br>
-		<a href="index.html">主页</a><br>
+		<a href="index.html">主页</a> <a href="javascript:location.reload();">刷新</a><br>
 		<h6>本软件仅为80z2.fun的本地版本，软件开发者与80z2.fun无任何关系。使用本软件可能会产生不属于我们的版权数据，请您务必于24小时内删除软件产生的所有数据。使用软件包括但不限于侵权问题，将由用户承担相关责任，软件开发者不承担任何责任。</h6>
 		<h6>本软件仅为技术交流和学习使用，其源代码已在Github.com开源，本软件中的音频、字体等来源于互联网，若有侵权，请联系更换或删除</h6>
 		
@@ -203,7 +203,7 @@
 			
 			<h3> 歌曲列表:</h3>
 			<div id="MusicList"></div>
-			
+			<h3>如果为空白，请等待载入</h3>
 			<script type="text/javascript">
 				function addmusic(MusicNumber, MusicName, MusicUrl) {
 					var divElement = document.getElementById('MusicList');
@@ -234,7 +234,8 @@
 								
 							}
 							if(song.type=="3"){
-								addmusic(i,song.name,"https://80z2.fun/home/mp.php/?name="+song.name+".cos");
+								var abc ="play.html?"+"song="+ encodeURIComponent(song.name)
+								addmusic(i,song.name,abc);
 							}
 							
 							console.log(i+"Type: " + song.type + ", Name: " + song.name);
