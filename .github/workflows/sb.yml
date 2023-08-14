@@ -21,5 +21,5 @@ jobs:
     - name: Upload file
       uses: actions/upload-artifact@v2
       with:
-        name: packs
-        path: packs 
+        name: out
+        path: out 
