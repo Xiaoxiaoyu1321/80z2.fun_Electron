@@ -9,7 +9,6 @@
     "appname": "80z2.fun_electron",
     "platform": "Windows",
     "arch": "x64",
-    "out": "D:\\mnb\\",
     "packager": "electron-packager ./ testapp --win --out ./outputs",
     "package": "electron-forge package",
     "make": "electron-forge make"
