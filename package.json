@@ -14,8 +14,6 @@
     "make": "electron-forge make"
   },
   "author": "Xiaoxiaoyu1321",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "electron-packager": "^17.1.1"
-  }
+  "license": "Apache-2.0"
+
 }
