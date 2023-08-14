@@ -15,7 +15,6 @@ jobs:
     - name: Install and Pack 
       run: |
         npm install electron
-        npm install
         npm run packager
     - name: Upload file
       uses: actions/upload-artifact@v2
