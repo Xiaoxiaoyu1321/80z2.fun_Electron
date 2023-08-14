@@ -21,5 +21,8 @@ jobs:
     - name: Upload file
       uses: actions/upload-artifact@v2
       with:
-        name: out
-        path: out 
+        name: out/80z2.fun_electron-win32-x64
+        path: WindowsOut
+      with:
+        name: out/80z2.fun_electron-darwin-x64
+        path: macOS Out
