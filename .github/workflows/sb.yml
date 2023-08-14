@@ -21,11 +21,6 @@ jobs:
     - name: Upload file
       uses: actions/upload-artifact@v2
       with:
-        name: out\make\
-        path: WindowsOut
+        name: outmake
+        path: out/make
         
-    - name: Upload file macOS
-      uses: actions/upload-artifact@v2
-      with:
-        name: out/make/
-        path: aaaaaa
