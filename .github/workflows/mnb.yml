@@ -20,6 +20,7 @@ jobs:
       run:
         #cd src && npm install && npm run buildwin
         npm install electron
+        npm install buildwin -g
         npm run buildwin
     # 步骤二的名称：将编译后的结果上传
     - name: Upload File
