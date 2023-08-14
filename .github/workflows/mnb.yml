@@ -20,7 +20,7 @@ jobs:
       run:
         #cd src && npm install && npm run buildwin
         npm install electron
-        npm install && npm run buildwin
+        npm run buildwin
     # 步骤二的名称：将编译后的结果上传
     - name: Upload File
       # 使用预制action：上传文件，可以将执行路径打包成zip上传
@@ -43,7 +43,8 @@ jobs:
       # 该步骤运行的终端命令，进入仓库的src目录，安装依赖，运行编译命令
       run:
         #cd src && npm install && npm run buildmac
-        npm install && npm run buildmac
+        npm install electron
+        npm run buildmac
     # 步骤二的名称：将编译后的结果上传
     - name: Upload File
       # 使用预制action：上传文件，可以将执行路径打包成zip上传
