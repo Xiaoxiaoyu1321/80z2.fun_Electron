@@ -15,11 +15,5 @@
   },
   "author": "Xiaoxiaoyu1321",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "electron-prebuilt-compile": "25.5.0"
-  },
-  "dependencies": {
-    "electron": "^25.5.0",
-    "pack": "^2.2.0"
-  }
+
 }
