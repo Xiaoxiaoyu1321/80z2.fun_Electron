@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			name="viewport">
+		<title></title>
+		<style>
+			a {
+				color: black;
+				/* 设置超链接的默认颜色 */
+			}
+
+			a:visited {
+				color: black;
+				/* 设置访问过的链接的颜色 */
+			}
+
+			a:hover {
+				color: red;
+				/* 设置鼠标悬停在链接上时的颜色 */
+			}
+
+			a:active {
+				color: red;
+				/* 设置正在点击链接时的颜色 */
+			}
+
+			.so {
+				display: flex;
+			}
+
+			.m_number_text {
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				width: 40px;
+				font-size: 19px;
+				color: #999;
+				margin-left: -5px;
+			}
+
+			.m_url_text {
+				font-size: 18px;
+				text-decoration: none
+			}
+
+			.text-input {
+				background-color: #F1F1F1;
+				border-radius: 5px;
+				border: none； color: #333;
+				font-size: 14px;
+				flex-grow: 1;
+				padding: 7px;
+			}
+
+			.m_back_div {
+				height: 7.5%;
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
+
+			.button {
+				display: inline-block;
+				border-radius: 4px;
+				background-color: #404040;
+				border: none;
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 14px;
+				padding: 6px;
+				width: 105px;
+				transition: all 0.5s;
+				cursor: pointer;
+				margin: 1px;
+			}
+
+			@font-face {
+				font-family: "myFont";
+				src: url("/ttf.ttf");
+			}
+
+			body {
+				font-family: "myFont", sans-serif;
+				zoom: 125%;
+				background-image: url('bg.jpg');
+				background-size:100%;
+				background-attachment:fixed;
+			}
+
+			/* 自定义文本框的样式 */
+			input[type="text"] {
+				padding: 6px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+				font-size: 10px;
+				color: #333;
+				width: 200px;
+			}
+
+			/* 高亮文本框的样式 */
+			input[type="text"]:focus {
+				border-color: #2196F3;
+				/* 设置聚焦时的边框颜色 */
+				box-shadow: 1px 1px 5px rgba(33, 150, 243, 0.5);
+				/* 设置聚焦时的阴影效果 */
+			}
+
+			.container {
+				display: flex;
+				/* 启用Flex布局 */
+				justify-content: space-between;
+				/* 在主轴上平均分配空间 */
+				width: 100%;
+				/* 设置容器宽度 */
+			}
+
+			.container a.my-link {
+				flex: 1;
+				/* 在Flex容器中平均分配宽度 */
+				text-align: center;
+
+
+				/* 将文本水平居中 */
+				text-decoration: none;
+				/* 去除链接的下划线 */
+				padding: 7px;
+				/* 设置内边距 */
+				background-color: #404040;
+				/* 设置链接文字颜色 */
+				border: 1px solid #FFFFFF;
+				color: #FFFFFF;
+				/* 设置边框 */
+				border-radius: 5px;
+				/* 设置边框圆角 */
+				transition: background-color 0.3s ease, color 0.3s ease;
+				/* 添加过渡效果 */
+			}
+		</style>
+	</head>
+	<body>
+		<a href="index.html">返回</a>
+		<h6>本软件仅为80z2.fun的本地版本，软件开发者与80z2.fun无任何关系。使用本软件可能会产生不属于我们的版权数据，请您务必于24小时内删除软件产生的所有数据。使用软件包括但不限于侵权问题，将由用户承担相关责任，软件开发者不承担任何责任。</h6>
+		<h6>本软件仅为技术交流和学习使用，其源代码已在Github.com开源，本软件中的音频、字体等来源于互联网，若有侵权，请联系更换或删除</h6>
+		<form action="http://80z2.fun/home/mso.php" method="get">
+			<!--文本输入框： input type="text"-->
+			<div class="so"><input class="text-input" type="text" name="text"><input class="button" type="submit"></div>
+			<div id="MusicList"></div>
+			
+			
+	</body>
+</html>
