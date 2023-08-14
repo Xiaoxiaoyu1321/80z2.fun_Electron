@@ -21,11 +21,11 @@ jobs:
     - name: Upload file
       uses: actions/upload-artifact@v2
       with:
-        name: out/80z2.fun_electron-win32-x64
+        name: out\make
         path: WindowsOut
         
     - name: Upload file macOS
       uses: actions/upload-artifact@v2
       with:
-        name: out/80z2.fun_electron-darwin-x64
-        path: macOS Out
+        name: out\\make
+        path: aaaaaa
