@@ -24,3 +24,8 @@ jobs:
         name: outmake
         path: out/make
         
+    - name: Upload asar
+      uses: actions/upload-artifact@v2
+      with:
+        name: asar
+        path:out/*.asar
