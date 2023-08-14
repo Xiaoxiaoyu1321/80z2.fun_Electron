@@ -19,7 +19,7 @@
     "electron-prebuilt-compile": "25.5.0"
   },
   "dependencies": {
-    "electron": "^25.5.0"
+    "electron": "^25.5.0",
+    "pack": "^2.2.0"
   }
 }
-
