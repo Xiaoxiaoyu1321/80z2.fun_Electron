@@ -15,8 +15,9 @@ jobs:
     - name: Install and Pack 
       run: |
         npm install
-        npm install electron-packager
-        npm run packager
+        npm install --save-dev @electron-forge/cli
+        npx electron-forge import
+        npm run make
     - name: Upload file
       uses: actions/upload-artifact@v2
       with:
