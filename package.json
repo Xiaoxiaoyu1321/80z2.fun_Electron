@@ -1,0 +1,23 @@
+{
+  "name": "80z2.fun_electron",
+  "version": "1.0.0",
+  "description": "The 80z2.fun",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "appname": "80z2.fun_electron",
+    "platform": "Windows",
+    "arch": "x64",
+    "out": "D:\\mnb\\",
+    "packager": "electron-packager ./ testapp --win --out ./outputs",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Xiaoxiaoyu1321",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "electron-prebuilt-compile": "25.5.0"
+  },
+  "dependencies": {}
+}
