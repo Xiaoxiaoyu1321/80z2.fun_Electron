@@ -30,10 +30,14 @@
 				float:right;
 				backdrop-filter : blur(5px);
 				flex-shrink:0;
-				width: 50%;
+				
 				border-radius: 20px; /* 设置圆角半径 */
 				padding: 15px;
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 阴影 */
+				width:50%;
+				
+				
+				
 			}
 			.main{
 				
@@ -48,6 +52,17 @@
 				font-weight: bold;
 				border-radius: 20px; /* 设置圆角半径 */
 				box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 阴影 */
+			}
+			
+			.songinfo{
+				float:right;
+				backdrop-filter : blur(5px);
+				flex-shrink:0;
+				
+				border-radius: 20px; /* 设置圆角半径 */
+				padding: 15px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 阴影 */
+				width:50%;
 			}
 		</style>
 		
@@ -117,6 +132,13 @@
 		<p style=color:#FFA500;font-size: 18px>歌词：<p>
 		<p id = song_lrc></p>
 		</div>
+		
+		
+		<div class=songinfo>
+		<p style="color:#FFA500;font-size: 18px;min-height:1px;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"> 歌曲信息：</p>
+		<p id=song_filename_text style="color:#FFFFFF;font-size: 18px;min-height:1px;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">文件名：null</p>
+		
+		</div>
 		<script>
 		
 			var song_name_text1 = document.getElementById("song_name_text")
@@ -125,6 +147,10 @@
 			musician_name_text1.innerHTML = "艺术家：" + musician
 			var album_name_text1 = document.getElementById("album_name_text")
 			album_name_text1.innerHTML = "专辑：" + album
+			
+			var song_filename_text1 = document.getElementById("song_filename_text")
+			song_filename_text1.textContent="文件名：" + song
+			
 			
 			var album_img1 = document.getElementById("album_img")
 			album_img1.src= "https://80z2.fun/home/80z2_Picutre.php?name=" + album
@@ -184,6 +210,10 @@
                             seconds.toString().padStart(2, '0') + "." +
                             milliseconds.toString().padStart(3, '0');
 			console.log(formattedDuration)
+			
+			
+			
+			
 			
 			
 			var vttfile = "WEBVTT \n0:00:00.000 --> " + String(formattedDuration)

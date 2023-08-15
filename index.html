@@ -24,12 +24,16 @@
 			a:active {
 				color: red;
 				/* 设置正在点击链接时的颜色 */
+				
 			}
 
 			.so {
 				display: flex;
 				float:right;
 				backdrop-filter : blur(3px);
+				border-radius: 10px; /* 设置圆角半径 */
+				padding: 10px;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 阴影 */
 				
 			}
 
@@ -150,7 +154,7 @@
 			}
 			.menu {
 				height:100%;
-				width:20%;
+				width:22%;
 				background-color= #FFFFFF;
 				backdrop-filter : blur(7px);
 				float:left;
@@ -167,6 +171,7 @@
 				padding: 10px;
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 阴影 */
 				float:right;
+				display: flex;
 			}
 			
 			.search {
@@ -181,19 +186,28 @@
 				
 				background-color:#66CCFF;
 			}
+			.search_button{
+				
+				display: inline-block;
+				padding: 2px 5px;
+				
+				
+				
+				border-radius: 20px; /* 设置圆角半径 */
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 阴影 */
+				font-size: 15px;
+			}
+			.search_text{
+			}
 			
 		</style>
 		
 	</head>
 	<body>
-		<div class="header">
-		<h3>
-		<div class="so">
-			<h3> 搜索:（不了）
-			<input class="text-input" type="text" name="text"><input class="button" type="submit">
-			</h3></div>
-		</h3>
-		</div>
+		
+		
+			
+		
 		<div class="menu">
 		<b>明天的梦 音乐站</b><br>
 		<a href="index.html">主页</a> <a href="javascript:location.reload();">刷新</a> <a href="so.html">搜索</a><br>
