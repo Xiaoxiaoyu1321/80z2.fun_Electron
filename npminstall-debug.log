@@ -7,7 +7,7 @@
   cacheDir: 'C:\\Users\\Xiaoxiaoyu\\.npminstall_tarball',
   env: {
     npm_config_registry: 'https://registry.npmmirror.com',
-    npm_config_argv: '{"remain":[],"cooked":["--fix-bug-versions","--china","--userconfig=C:\\\\Users\\\\Xiaoxiaoyu\\\\.cnpmrc","--disturl=https://cdn.npmmirror.com/binaries/node","--registry=https://registry.npmmirror.com","buildwin","-g"],"original":["--fix-bug-versions","--china","--userconfig=C:\\\\Users\\\\Xiaoxiaoyu\\\\.cnpmrc","--disturl=https://cdn.npmmirror.com/binaries/node","--registry=https://registry.npmmirror.com","buildwin","-g"]}',
+    npm_config_argv: '{"remain":[],"cooked":["--fix-bug-versions","--china","--userconfig=C:\\\\Users\\\\Xiaoxiaoyu\\\\.cnpmrc","--disturl=https://cdn.npmmirror.com/binaries/node","--registry=https://registry.npmmirror.com","electron-installer-debian","-g","--save-dev"],"original":["--fix-bug-versions","--china","--userconfig=C:\\\\Users\\\\Xiaoxiaoyu\\\\.cnpmrc","--disturl=https://cdn.npmmirror.com/binaries/node","--registry=https://registry.npmmirror.com","electron-installer-debian","-g","--save-dev"]}',
     npm_config_user_agent: 'npminstall/7.9.0 npm/? node/v18.17.1 win32 x64',
     npm_config_cache: 'C:\\Users\\Xiaoxiaoyu\\.npminstall_tarball',
     NODE: 'D:\\Software\\Node.js\\node.exe',

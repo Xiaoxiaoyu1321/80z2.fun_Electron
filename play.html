@@ -28,6 +28,10 @@
 		
 		<div class="mediaplay">
 		<a href="index.html">返回</a>
+		<p></p>
+		<img id="album_img" src="" width="200px",height="200px">
+		<p></p>
+		
 		<script type="text/javascript">
 			function GetQueryString(name)
 			{
@@ -37,8 +41,8 @@
 			}
 			var song = GetQueryString("song");
 			
-			var txtttt = "<h5>现在播放：" + song+"</h5>"
-			document.write(txtttt)
+			/* var txtttt = "<h5>现在播放：" + song+"</h5>"
+			document.write(txtttt) */
 			var dnm = '\" type=\"audio/mpeg\"'
 			var wdnmd = 'control=\"controls\"'
 			console.log(dnm)
@@ -52,14 +56,75 @@
 			document.write(titlesonegname)
 			
 			
-			function pauseaudio(){
+			try{
+				var OSB_split = song.split('[')
+				var song_name = OSB_split[0]
 				
-				audio.pause();
-				alert("nb");
+				var OSB_split2 = OSB_split[1].split(']')
+				var OSB_split3 = OSB_split2[0].split('.')
+				var musician = OSB_split3[0]
+				var album = OSB_split3[1]
+				
+				console.log('歌曲名：'+song_name)
+				console.log('艺术家：'+ musician)
+				console.log('专辑：'+album)
+			}catch(error){
+				console.log(error)
+				var song_name = song
+				var musician = song
+				var album = song
+			}finally{
+				console.log("发生什么事了")
 			}
-			
 		</script>
 		
+		
+		
+		<p id = song_name_text>歌曲名：null</p>
+		<p id = musician_name_text>艺术家:null</p>
+		<p id = album_name_text>专辑：null</p>
+		
+		
+		<p>歌词：<p>
+		<p id = song_lrc>找不到歌词文件</p>
+		<script>
+			
+			var song_name_text1 = document.getElementById("song_name_text")
+			song_name_text1.innerHTML = "歌曲名:" + song_name
+			var musician_name_text1 = document.getElementById("musician_name_text")
+			musician_name_text1.innerHTML = "艺术家：" + musician
+			var album_name_text1 = document.getElementById("album_name_text")
+			album_name_text1.innerHTML = "专辑：" + album
+			
+			var album_img1 = document.getElementById("album_img")
+			album_img1.src= "https://80z2.fun/home/80z2_Picutre.php?name=" + album
+			console.log(album_img1.src)
+			
+			
+			song_lrc_url="https://jzsw-1304292379.cos.ap-beijing.myqcloud.com/txt/"+song+'.mp3.txt'
+			console.log(song_lrc_url)
+			
+			var song_lrc_text = document.getElementById('song_lrc')
+			
+			fetch(song_lrc_url , {
+				mode:'no-cors'
+				})
+			
+				.then(response => response.text())
+				.then(data => {
+					var song_lrc_text666 = data;
+					console.log(song_lrc_text666);
+					song_lrc_text.textContent  = data
+					
+				})
+				.catch(error => {
+					console.error('请求歌词错误：',error);
+					song_lrc_text.textContent  = "找不到歌词文件"
+				});
+			
+			
+		
+		</script>
 		
 	</body>
 </html>
