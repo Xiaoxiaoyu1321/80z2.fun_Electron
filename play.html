@@ -15,23 +15,30 @@
 				
 			}
 			.mediaplay{
+				
 				backdrop-filter : blur(5px);
-				width=100%;
 				height=100%;
 				float:left;
+				flex-shrink:0;
+				width: 40%;
 			}
 			.song_lrc114514{
+				
 				float:right;
+				backdrop-filter : blur(5px);
+				flex-shrink:0;
+				width: 59%;
 			}
 			.main{
-				float:left;
+				
+				
 			}
 		</style>
 		
 		
 	</head>
 	<body>
-		
+		<div class="main">
 		<div class="mediaplay">
 		<a href="index.html">返回</a>
 		<p></p>
@@ -141,6 +148,53 @@
 			
 		
 		</script>
+		
+		<script>
+			/*
+			var audioElement = document.getElementById("mp");
 			
+			
+			
+			
+			audioElement.addEventListener("loadedmetadata", function() {
+			var durationInSeconds = audioElement.duration;
+			var hours = Math.floor(durationInSeconds / 3600);
+			var minutes = Math.floor((durationInSeconds % 3600) / 60);
+			var seconds = Math.floor(durationInSeconds % 60);
+			var milliseconds = Math.floor((durationInSeconds % 1) * 1000);
+    
+			var formattedDuration = hours.toString().padStart(2, '0') + ":" +
+                            minutes.toString().padStart(2, '0') + ":" +
+                            seconds.toString().padStart(2, '0') + "." +
+                            milliseconds.toString().padStart(3, '0');
+			console.log(formattedDuration)
+			
+			
+			var vttfile = "WEBVTT \n0:00:00.000 --> " + String(formattedDuration)
+			console.log(vttfile)
+			
+			
+			
+			var artistTrack = document.createElement("track");
+			artistTrack.kind = "metadata";
+			artistTrack.label = "艺术家";
+			artistTrack.src = vttfile + "\n" + "专辑:" + album;
+			artistTrack.srclang = "zh-CN";
+  
+			var albumTrack = document.createElement("track");
+			albumTrack.kind = "metadata";
+			albumTrack.label = "专辑" + "\n" + "艺术家:" + musician ;
+			albumTrack.src = vttfile;
+			albumTrack.srclang = "zh-CN";
+			
+			audioElement.appendChild(artistTrack);
+			audioElement.appendChild(albumTrack);
+			});
+			
+			*/
+		</script>
+		
+		
+		</div>
 	</body>
 </html>
