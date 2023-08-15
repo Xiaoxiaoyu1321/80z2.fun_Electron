@@ -18,8 +18,14 @@
 				backdrop-filter : blur(5px);
 				width=100%;
 				height=100%;
+				float:left;
 			}
-		
+			.song_lrc114514{
+				float:right;
+			}
+			.main{
+				float:left;
+			}
 		</style>
 		
 		
@@ -29,7 +35,7 @@
 		<div class="mediaplay">
 		<a href="index.html">返回</a>
 		<p></p>
-		<img id="album_img" src="" width="200px",height="200px">
+		<img id="album_img" src="" width="200px" height="200px">
 		<p></p>
 		
 		<script type="text/javascript">
@@ -83,12 +89,13 @@
 		<p id = song_name_text>歌曲名：null</p>
 		<p id = musician_name_text>艺术家:null</p>
 		<p id = album_name_text>专辑：null</p>
-		
-		
-		<p>歌词：<p>
-		<p id = song_lrc>找不到歌词文件</p>
+		</div>
+		<div class=song_lrc114514>
+		<p style=color:#FFA500;font-size: 18px>歌词：<p>
+		<p id = song_lrc></p>
+		</div>
 		<script>
-			
+		
 			var song_name_text1 = document.getElementById("song_name_text")
 			song_name_text1.innerHTML = "歌曲名:" + song_name
 			var musician_name_text1 = document.getElementById("musician_name_text")
@@ -104,7 +111,8 @@
 			song_lrc_url="https://jzsw-1304292379.cos.ap-beijing.myqcloud.com/txt/"+song+'.mp3.txt'
 			console.log(song_lrc_url)
 			
-			var song_lrc_text = document.getElementById('song_lrc')
+			
+			
 			
 			fetch(song_lrc_url , {
 				mode:'no-cors'
@@ -114,8 +122,16 @@
 				.then(data => {
 					var song_lrc_text666 = data;
 					console.log(song_lrc_text666);
-					song_lrc_text.textContent  = data
-					
+					// song_lrc_text.textContent  = data + "\n"
+				
+					lines = data.split("\n")
+					var textContaner = document.querySelector(".song_lrc114514");
+					lines.forEach(line => {
+						var paragraph = document.createElement("p");
+						paragraph.style = "color:#FFA500;font-size: 18px"
+						paragraph.textContent = line;
+						textContaner.appendChild(paragraph);
+					});
 				})
 				.catch(error => {
 					console.error('请求歌词错误：',error);
@@ -125,6 +141,6 @@
 			
 		
 		</script>
-		
+			
 	</body>
 </html>
