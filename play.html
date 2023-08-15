@@ -39,6 +39,16 @@
 				
 				
 			}
+			a {
+				display: inline-block;
+				padding: 5px 10px;
+				/* border: 1px solid #3498db; */ /* 边框样式：2px 宽度、实线、蓝色颜色 */
+				text-decoration: none; /* 移除下划线 */
+				color: #3498db; /* 链接文字颜色 */
+				font-weight: bold;
+				border-radius: 20px; /* 设置圆角半径 */
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 阴影 */
+			}
 		</style>
 		
 		
@@ -46,7 +56,7 @@
 	<body>
 		<div class="main">
 		<div class="mediaplay">
-		<a href="index.html">返回</a>
+		<a href="index.html"><- 返回</a>
 		<p></p>
 		<img id="album_img" src="" width="200px" height="200px">
 		<p></p>
@@ -99,9 +109,9 @@
 		
 		
 		
-		<p id = song_name_text>歌曲名：null</p>
-		<p id = musician_name_text>艺术家:null</p>
-		<p id = album_name_text>专辑：null</p>
+		<p id = song_name_text style = "color:black;font-size: 18px; bold;min-height:1px;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">歌曲名：null</p>
+		<p id = musician_name_text style = "color:#black;font-size: 18px;min-height:1px;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">艺术家:null</p>
+		<p id = album_name_text style = "color:#black;font-size: 18px;min-height:1px;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">专辑：null</p>
 		</div>
 		<div class=song_lrc114514>
 		<p style=color:#FFA500;font-size: 18px>歌词：<p>
@@ -141,8 +151,8 @@
 					var textContaner = document.querySelector(".song_lrc114514");
 					lines.forEach(line => {
 						var paragraph = document.createElement("p");
-						paragraph.style = "color:#FFA500;font-size: 18px"
-						paragraph.textContent = line;
+						paragraph.style = "color:#FFFFFF;font-size: 18px;font-weight: bold;min-height:1px;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
+						paragraph.textContent = line ;
 						textContaner.appendChild(paragraph);
 					});
 				})
